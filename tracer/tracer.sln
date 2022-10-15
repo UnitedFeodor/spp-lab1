@@ -8,16 +8,25 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tracer.serialization2", "tracer.serialization2", "{BE0B0859-C6A0-4141-8BA0-CD11973A207D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.json", "..\tracer.serialization\tracer.serialization.json\tracer.serialization.json.csproj", "{C217D751-BC9C-45F1-876D-A0CD949796DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3} = {5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.xml", "..\tracer.serialization\tracer.serialization.xml\tracer.serialization.xml.csproj", "{BB3AABAB-B9D8-4DF6-96BE-D932890B24D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3} = {5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.yaml", "..\tracer.serialization\tracer.serialization.yaml\tracer.serialization.yaml.csproj", "{A6D25C2E-F2FB-414F-BA6B-1B219DBB31CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3} = {5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tracer.core.tests", "tracer.core.tests\tracer.core.tests.csproj", "{955A984F-8B89-4E43-A4C8-4472601DE3D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.abstractions", "tracer.serialization.abstractions\tracer.serialization.abstractions.csproj", "{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tracer.serialization.abstractions", "tracer.serialization.abstractions\tracer.serialization.abstractions.csproj", "{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.example", "tracer.example\tracer.example.csproj", "{B5990D15-3F92-4560-A86C-DDE811C73137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tracer.example", "tracer.example\tracer.example.csproj", "{B5990D15-3F92-4560-A86C-DDE811C73137}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tracer.core.tests", "tracer.core.tests\tracer.core.tests.csproj", "{119704B3-EBE1-4AF4-9E4D-41A11258E465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +50,6 @@ Global
 		{A6D25C2E-F2FB-414F-BA6B-1B219DBB31CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D25C2E-F2FB-414F-BA6B-1B219DBB31CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D25C2E-F2FB-414F-BA6B-1B219DBB31CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{955A984F-8B89-4E43-A4C8-4472601DE3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{955A984F-8B89-4E43-A4C8-4472601DE3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{955A984F-8B89-4E43-A4C8-4472601DE3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{955A984F-8B89-4E43-A4C8-4472601DE3D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4026E0-4B6A-4FFB-B4DC-CCF8D21791C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +58,10 @@ Global
 		{B5990D15-3F92-4560-A86C-DDE811C73137}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5990D15-3F92-4560-A86C-DDE811C73137}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5990D15-3F92-4560-A86C-DDE811C73137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
