@@ -1,0 +1,27 @@
+threads:
+- id: 7
+  time: 417ms
+  methods:
+  - methodName: Method1
+    className: TestClass1
+    time: 309ms
+    methods: 
+  - methodName: Method2
+    className: TestClass1
+    time: 108ms
+    methods: 
+- id: 8
+  time: 718ms
+  methods:
+  - methodName: Method1
+    className: TestClass2
+    time: 512ms
+    methods:
+    - methodName: Method2
+      className: TestClass2
+      time: 202ms
+      methods: 
+  - methodName: Method2
+    className: TestClass2
+    time: 206ms
+    methods: 

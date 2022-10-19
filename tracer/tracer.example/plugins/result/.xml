@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <thread id="7" time="417ms">
+    <method name="Method1" class="TestClass1" time="309ms" />
+    <method name="Method2" class="TestClass1" time="108ms" />
+  </thread>
+  <thread id="8" time="718ms">
+    <method name="Method1" class="TestClass2" time="512ms">
+      <methods name="Method2" class="TestClass2" time="202ms" />
+    </method>
+    <method name="Method2" class="TestClass2" time="206ms" />
+  </thread>
+</root>
