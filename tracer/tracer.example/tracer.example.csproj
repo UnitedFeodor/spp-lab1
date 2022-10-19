@@ -1,9 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\tracer.serialization\tracer.serialization.json\tracer.serialization.json.csproj" />
+    <ProjectReference Include="..\..\tracer.serialization\tracer.serialization.xml\tracer.serialization.xml.csproj" />
+    <ProjectReference Include="..\..\tracer.serialization\tracer.serialization.yaml\tracer.serialization.yaml.csproj" />
+    <ProjectReference Include="..\tracer.core\tracer.core.csproj" />
+    <ProjectReference Include="..\tracer.serialization.plugins\tracer.serialization.plugins.csproj" />
+  </ItemGroup>
 
 </Project>

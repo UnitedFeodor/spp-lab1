@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace tracer.serialization.abstractions
 {
-    internal class TracedMethods
+    public class TracedMethods
     {
+        public string MethodName { get; }
+        public string ClassName { get; }
+        public long Time { get; }
+        public IReadOnlyList<TracedMethods> Methods { get; }
+
+        public TracedMethods(string methodName, string className, long time, IReadOnlyList<TracedMethods> methods)
+        {
+            MethodName = methodName;
+            ClassName = className;
+            Time = time;
+            Methods = methods;
+        }
     }
 }

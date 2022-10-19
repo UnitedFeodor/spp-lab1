@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.core", "tracer.core\tracer.core.csproj", "{1EADF100-078D-4107-80BD-77DA4E49FEB4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tracer.serialization2", "tracer.serialization2", "{BE0B0859-C6A0-4141-8BA0-CD11973A207D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tracer.serialization", "tracer.serialization", "{BE0B0859-C6A0-4141-8BA0-CD11973A207D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.json", "..\tracer.serialization\tracer.serialization.json\tracer.serialization.json.csproj", "{C217D751-BC9C-45F1-876D-A0CD949796DA}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,7 +26,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.abstra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.example", "tracer.example\tracer.example.csproj", "{B5990D15-3F92-4560-A86C-DDE811C73137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tracer.core.tests", "tracer.core.tests\tracer.core.tests.csproj", "{119704B3-EBE1-4AF4-9E4D-41A11258E465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.core.tests", "tracer.core.tests\tracer.core.tests.csproj", "{119704B3-EBE1-4AF4-9E4D-41A11258E465}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1EADF100-078D-4107-80BD-77DA4E49FEB4} = {1EADF100-078D-4107-80BD-77DA4E49FEB4}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tracer.serialization.plugins", "tracer.serialization.plugins\tracer.serialization.plugins.csproj", "{D19098B7-9D5D-40BB-8027-3079A6173935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +67,10 @@ Global
 		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{119704B3-EBE1-4AF4-9E4D-41A11258E465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D19098B7-9D5D-40BB-8027-3079A6173935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19098B7-9D5D-40BB-8027-3079A6173935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19098B7-9D5D-40BB-8027-3079A6173935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19098B7-9D5D-40BB-8027-3079A6173935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

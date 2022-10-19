@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace tracer.serialization.abstractions
 {
-    internal interface ITraceResultSerializer
+    public interface ITraceResultSerializer
     {
+
+        string Format { get; }
+        void Serialize(TraceResult traceResult, Stream to);
     }
 }

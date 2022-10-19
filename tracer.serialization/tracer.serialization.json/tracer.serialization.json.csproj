@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,5 +9,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\tracer\tracer.serialization.abstractions\tracer.serialization.abstractions.csproj" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(OutDir)*.dll&quot; &quot;D:\5 sem\spp\lab1\spp-lab1\tracer\tracer.example\plugins\&quot;" />
+  </Target>
 
 </Project>

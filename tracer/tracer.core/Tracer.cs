@@ -15,13 +15,13 @@ namespace tracer.core
 
         private static List<TracedMethods> GetInnerMethods(MethodInfo rootMethod)
         {
-            var traceMethods = new List<TracedMethods>();
+            var tracedMethods = new List<TracedMethods>();
             foreach (var method in rootMethod.InnerMethods)
             {
-                traceMethods.Add(new TracedMethods(method.MethodName, method.ClassName,
+                tracedMethods.Add(new TracedMethods(method.MethodName, method.ClassName,
                     method.Stopwatch.ElapsedMilliseconds, GetInnerMethods(method)));
             }
-            return traceMethods;
+            return tracedMethods;
         }
         public TraceResult GetTraceResult()
         {
@@ -30,10 +30,8 @@ namespace tracer.core
             {
                 var methods = new List<TracedMethods>();
                 
-
                 foreach (MethodInfo method in thread.Value.RootMethods)
                 {
-
                     methods.Add(new TracedMethods(method.MethodName, method.ClassName,
                         method.Stopwatch.ElapsedMilliseconds, GetInnerMethods(method)));
                 }
@@ -71,9 +69,7 @@ namespace tracer.core
         public void StopTrace()
         {
             MethodInfo methodInfo;
-            var threadId = Environment.CurrentManagedThreadId;
-            
-            if (!_threads[threadId].CallStack.TryPop(out methodInfo))
+            if (!_threads[Environment.CurrentManagedThreadId].CallStack.TryPop(out methodInfo))
                 return;
             methodInfo.Stopwatch.Stop();
         }
